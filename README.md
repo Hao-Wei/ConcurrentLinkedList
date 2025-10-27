@@ -14,11 +14,18 @@ make
 usage: ./list_OL [-n <size>] [-r <rounds>] [-p <procs>] [-z <zipfian_param>] [-u <update percent>] [-tt <runtime (seconds)>]
 ```
 
-Run `./list_OL` and `./list_HOH` to benchmark throughput of the optimistic locking (OL) and hand-over-hand (HOH) versions of the linked list. Can vary the initial size of the linked list (n), the number of processes (p), the zipfian_parameter (z, note that z=0 draws keys from the uniform distribution), percentage of updates (u: number between 0 and 100), and how long to run each experiment for (tt), and number of rounds (r). After each round, the benchmark will report throughput (measured in millions of operations per second).
+Run `./list_OL` and `./list_HOH` to benchmark throughput of the optimistic locking (OL) and hand-over-hand (HOH) versions of the linked list. Can vary 
+1. the initial size of the linked list (n), 
+2. the number of processes (p), 
+3. the zipfian_parameter (z, note that z=0 draws keys from the uniform distribution), 
+4. percentage of updates (u: number between 0 and 100), and how long to run each experiment for (tt),
+5. and number of rounds (r). 
+
+After each round, the benchmark will report throughput (measured in millions of operations per second).
 
 Default workloads:
-    - high contention: `./list_OL -n 20  -p 8 -r 3 -z 0.99 -u 100`
-    - low contention:  `./list_OL -n 100 -p 8 -r 3 -z 0    -u 20`
+- high contention: `./list_OL -n 20  -p 8 -r 3 -z 0.99 -u 100`
+- low contention:  `./list_OL -n 100 -p 8 -r 3 -z 0    -u 20`
 
 ## Building in debug mode
 
