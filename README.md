@@ -8,7 +8,7 @@ cd ConcurrentLinkedList
 mkdir build
 cd build
 cmake ..
-cd benchmarks
+cd benchmark
 make
 ./list_OL -help
 usage: ./list_OL [-n <size>] [-r <rounds>] [-p <procs>] [-z <zipfian_param>] [-u <update percent>] [-tt <runtime (seconds)>]
@@ -34,7 +34,7 @@ cd ConcurrentLinkedList
 mkdir build/debug
 cd build/debug
 cmake -DCMAKE_BUILD_TYPE=Debug ../..
-cd benchmarks
+cd benchmark
 make
 ./list_OL -help
 ```
